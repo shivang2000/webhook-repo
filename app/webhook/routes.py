@@ -12,14 +12,6 @@ databaseapi = Blueprint('databaseapi', __name__)
 def receiver():
     if request.headers['Content-Type'] == 'application/json':
         datajson = request.json
-        print()
-        print()
-        print()
-        print(json.dumps(datajson))
-        print()
-        print()
-        print()
-        # print(type(datajson.keys()))
         if 'pusher' in  list(datajson.keys()):
             # it is push request
             author = datajson['pusher']['name']
